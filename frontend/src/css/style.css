@@ -789,3 +789,8 @@ p {
     display: flex;
   }
 }
+
+.brand-logo {
+  border: 1px solid var(--color-border);
+  pointer-events: none; /* <-- Das sorgt dafür, dass Klicks direkt an den Link durchgereicht werden */
+}

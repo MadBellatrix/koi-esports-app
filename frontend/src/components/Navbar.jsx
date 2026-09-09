@@ -37,7 +37,19 @@ const Navbar = () => {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link to="/" className="brand" onClick={closeMenu}>
+       <Link 
+          to="/" 
+          className="brand" 
+          onClick={(e) => {
+            closeMenu();
+            // Wenn wir schon auf der Startseite sind, verhindern wir den harten Standard-Link 
+            // und scrollen stattdessen sanft nach ganz oben
+            if (location.pathname === '/') {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+        >
           <img className="brand-logo" src={logo} alt="Koi-Esports Emblem" width="40" height="40" />
           <span className="brand-name">Koi-Esports</span>
         </Link>

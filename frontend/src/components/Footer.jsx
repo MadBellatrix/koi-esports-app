@@ -8,12 +8,22 @@ const Footer = () => {
     <footer className="site-footer">
       <div className="footer-inner">
         
-       <div className="footer-brand">
-          <Link to="/" className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.6em' }}>
-            <img className="brand-logo" src={logo} alt="Koi-Esports Emblem" width="32" height="32" />
-            <span className="brand-name">Koi-Esports</span>
-          </Link>
-        </div>
+      <Link 
+          to="/" 
+          className="brand" 
+          onClick={(e) => {
+            closeMenu();
+            // Wenn wir schon auf der Startseite sind, verhindern wir den harten Standard-Link 
+            // und scrollen stattdessen sanft nach ganz oben
+            if (location.pathname === '/') {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+        >
+          <img className="brand-logo" src={logo} alt="Koi-Esports Emblem" width="40" height="40" />
+          <span className="brand-name">Koi-Esports</span>
+        </Link>
         
         <div className="footer-links">
           <nav className="footer-nav" aria-label="Footer-Navigation">
