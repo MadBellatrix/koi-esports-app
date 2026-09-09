@@ -174,7 +174,7 @@ const Team = () => {
         {/* Hier rufen wir unsere Hilfsfunktion für jede Gruppe auf */}
         {renderPlayerGroup("Management", "Management & Owner")}
         {renderPlayerGroup("Team 1", "Team 1 (Prime League)")}
-        {renderPlayerGroup("Team 2", "Team 2 (Academy / Prime League)")}
+        {renderPlayerGroup("Team 2", "Team 2 (Prime League)")}
         
       </div>
     </section>
