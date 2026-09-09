@@ -4,6 +4,12 @@ import kyloImg from '../assets/Kylo.jpeg';
 import moImg from '../assets/Mo.jpeg';
 import jeyImg from '../assets/Jey.jpeg';
 import annoImg from '../assets/Anno.jpg';
+import fabianImg from '../assets/Fabian.png'
+import marioImg from '../assets/Mario.png'
+import paulImg from '../assets/Paul.png'
+import philipImg from '../assets/Philip.png'
+import nilsImg from '../assets/Nils.png'
+import dennisImg from '../assets/Dennis.png'
 
 // Platzhalter-URL für Spieler ohne eigenes Bild
 const placeholderBase = "https://placehold.co/400x400/0F1E30/C89B3C?text=";
@@ -48,7 +54,7 @@ const players = [
     name: 'Nils "Noran" Gellenbeck', 
     role: "Toplane", 
     gamertag: "Dietrich Aden", 
-    image: null, 
+    image: nilsImg, 
     group: "Team 1" 
   },
 
@@ -57,7 +63,7 @@ const players = [
     name: 'Mario Meßmer', 
     role: "Supporter", 
     gamertag: "CrueLOr", 
-    image: null, 
+    image: marioImg, 
     group: "Team 2" 
   },
   { 
@@ -80,21 +86,21 @@ const players = [
     role: "Midlane", 
     gamertag: "DönerohneTomate", 
     twitch: "lost_maschien", 
-    image: null, 
+    image: fabianImg, 
     group: "Team 2" 
   },
   { 
     name: "Philip Asbeck", 
     role: "ADC", 
     gamertag: "Stay Aggressive", 
-    image: null, 
+    image: philipImg, 
     group: "Team 2" 
   },
   { 
     name: "Paul-Ruben", 
     role: "Jungle", 
     gamertag: "PaRoOby", 
-    image: null, 
+    image: paulImg, 
     group: "Team 2" 
   },
   { 
@@ -102,6 +108,14 @@ const players = [
     role: "Jungler", 
     gamertag: "Hütes des Waldes", 
     image: null, 
+    group: "Team 2" 
+  },
+
+    { 
+    name: "Dennis Roelofs", 
+    role: "Jungler", 
+    gamertag: "???", 
+    image: dennisImg, 
     group: "Team 2" 
   },
 ];
