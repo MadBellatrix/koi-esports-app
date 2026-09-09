@@ -1,26 +1,43 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-// In Vite importieren wir Bilder direkt oben, damit der Bundler sie korrekt verarbeitet
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import logo from '../assets/Emblem.jpeg';
 
 const Navbar = () => {
-  // Das ist unser React-State für das mobile Menü (offen oder zu)
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
-  const closeMenu = () => {
-    setIsOpen(false);
+  // Hilfsfunktion für Anker-Links, die auch von Unterseiten aus funktioniert
+  const handleAnchorClick = (e, sectionId) => {
+    e.preventDefault();
+    closeMenu();
+
+    // Wenn wir nicht auf der Startseite sind, gehen wir erst dorthin
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Kurz warten, bis die Startseite geladen ist, dann scrollen
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // Wenn wir schon auf der Startseite sind, direkt sanft hinscrollen
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
     <header className="site-header">
       <div className="header-inner">
-        {/* Link ist die React-Router-Version vom <a>-Tag. Sie verhindert das Neuladen der Seite. */}
- <Link to="/" className="brand" onClick={closeMenu}>
+        <Link to="/" className="brand" onClick={closeMenu}>
           <img className="brand-logo" src={logo} alt="Koi-Esports Emblem" width="40" height="40" />
           <span className="brand-name">Koi-Esports</span>
         </Link>
@@ -37,11 +54,11 @@ const Navbar = () => {
           <span></span>
         </button>
         
-        {/* Wenn isOpen "true" ist, hängen wir die Klasse "is-open" an, sonst nichts */}
         <nav className={`primary-nav ${isOpen ? 'is-open' : ''}`} id="primaryNav">
           <Link to="/team" onClick={closeMenu}>Team</Link>
-          <a href="/#spiele" onClick={closeMenu}>Spiele</a>
-          <a href="/#timeline" onClick={closeMenu}>Timeline</a>
+          {/* Nutzt jetzt die smarte Klick-Funktion statt eines starren hrefs */}
+          <a href="/#spiele" onClick={(e) => handleAnchorClick(e, 'spiele')}>Spiele</a>
+          <a href="/#timeline" onClick={(e) => handleAnchorClick(e, 'timeline')}>Timeline</a>
           <Link to="/kontakt" onClick={closeMenu}>Kontakt</Link>
           <Link to="/impressum" onClick={closeMenu}>Impressum</Link>
         </nav>
