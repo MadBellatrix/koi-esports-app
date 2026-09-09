@@ -8,9 +8,11 @@ const Footer = () => {
     <footer className="site-footer">
       <div className="footer-inner">
         
-        <div className="footer-brand">
-          <img className="brand-logo" src={logo} alt="Koi-Esports Emblem" width="32" height="32" />
-          <span className="brand-name">Koi-Esports</span>
+       <div className="footer-brand">
+          <Link to="/" className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.6em' }}>
+            <img className="brand-logo" src={logo} alt="Koi-Esports Emblem" width="32" height="32" />
+            <span className="brand-name">Koi-Esports</span>
+          </Link>
         </div>
         
         <div className="footer-links">

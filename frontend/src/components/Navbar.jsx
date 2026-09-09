@@ -20,7 +20,7 @@ const Navbar = () => {
     <header className="site-header">
       <div className="header-inner">
         {/* Link ist die React-Router-Version vom <a>-Tag. Sie verhindert das Neuladen der Seite. */}
-        <Link to="/" className="brand" onClick={closeMenu}>
+ <Link to="/" className="brand" onClick={closeMenu}>
           <img className="brand-logo" src={logo} alt="Koi-Esports Emblem" width="40" height="40" />
           <span className="brand-name">Koi-Esports</span>
         </Link>
