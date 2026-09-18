@@ -10,6 +10,7 @@ import paulImg from '../assets/Paul.png'
 import philipImg from '../assets/Philip.png'
 import nilsImg from '../assets/Nils.png'
 import dennisImg from '../assets/Dennis.png'
+import mattesImg from '../assets/Mattes.jpg'
 
 // Platzhalter-URL für Spieler ohne eigenes Bild
 const placeholderBase = "https://placehold.co/400x400/0F1E30/C89B3C?text=";
@@ -79,7 +80,9 @@ const players = [
     name: "Mattes Werner",
     role: "Toplane",
     gamertag: "tarrosilver",
-    image: null,
+    image: mattesImg,
+    imageFit: "cover",
+     imagePosition: "90% 10%",
     group: "Team 2"
   },
   {

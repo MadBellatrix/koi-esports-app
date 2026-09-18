@@ -49,7 +49,10 @@ const Contact = () => {
               <h2>Team & Kooperationen</h2>
               <ul className="contact-list">
                 <li>
-                  <a className="contact-link" href="mailto:baertigerossi@gmail.com">E-Mail
+                  <a
+                    className="contact-link"
+                    href="mailto:baertigerossi@gmail.com?subject=Anfrage%20an%20KOI%20Esports&body=Hallo%20KOI%20Esports%2C%0A%0A"
+                  >E-Mail
                     <span className="contact-meta">baertigerossi@gmail.com</span>
                   </a>
                 </li>
@@ -94,13 +97,13 @@ const Contact = () => {
                 </a>
               </div>
             </article>
-
+{/* 
             <article className="panel contact-card">
               <p className="eyebrow">Direkt</p>
               <h2>Für Anfragen</h2>
               <p>Wenn du mit uns zusammenarbeiten, Sponsoring, Events oder Player-Management besprechen möchtest, nehme direkt Kontakt mit uns auf.</p>
               <button className="btn" type="button" onClick={openModal}>Nachricht senden</button>
-            </article>
+            </article> */}
           </div>
         </div>
       </section>

@@ -68,7 +68,7 @@ const Home = () => {
                 <h3>League of Legends</h3>
               </div>
             </article>
-
+{/* 
             <article className="game-card panel reveal is-visible">
               <img 
                 src="https://placehold.co/300x400/0F1E30/C89B3C?text=Clash+Royale" 
@@ -87,7 +87,7 @@ const Home = () => {
                 <span>+</span>
                 <p>Weitere Titel folgen</p>
               </div>
-            </article>
+            </article> */}
 
           </div>
         </div>
