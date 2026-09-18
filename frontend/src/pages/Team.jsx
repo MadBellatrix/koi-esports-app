@@ -51,6 +51,10 @@ const players = [
     gamertag: "SlimShady",
     image: jeyImg,
     imagePosition: "50% 25%",
+    imageSource: {
+      label: "UHDpaper.com",
+      url: "https://www.uhdpaper.com/2024/03/peacemaker-high-noon-yone-4k-8k-3181o.html?m=1"
+    },
     group: "Team 1"
   },
   {
@@ -82,7 +86,11 @@ const players = [
     gamertag: "tarrosilver",
     image: mattesImg,
     imageFit: "cover",
-     imagePosition: "90% 10%",
+    imagePosition: "90% 10%",
+    imageSource: {
+      label: "UHDpaper.com",
+      url: "https://www.uhdpaper.com/2021/06/renekton-lol-league-of-4k-8710b.html?m=1"
+    },
     group: "Team 2"
   },
   {
@@ -108,6 +116,10 @@ const players = [
     twitch: "lost_maschiene",
     image: fabianImg,
     imagePosition: "50% 25%",
+    imageSource: {
+      label: "UHDpaper.com",
+      url: "https://www.uhdpaper.com/2022/04/syndra-lol-art-4k-7441h.html?m=0"
+    },
     group: "Team 2"
   },
 
@@ -117,6 +129,10 @@ const players = [
     gamertag: "Stay Aggressive",
     image: philipImg,
     imagePosition: "50% 35%",
+    imageSource: {
+      label: "UHDpaper.com",
+      url: "https://www.uhdpaper.com/2026/01/kaisa-lol-art-4k-8k-wallpaper-6805l.html"
+    },
     group: "Team 2"
   },
 
@@ -126,6 +142,10 @@ const players = [
     gamertag: "CrueLOr",
     image: marioImg,
     imagePosition: "50% 35%",
+    imageSource: {
+      label: "UHDpaper.com",
+      url: "https://www.uhdpaper.com/2018/12/thresh-lol-high-noon-splash-art-8k-298.html"
+    },
     group: "Team 2"
   },
 
@@ -185,6 +205,19 @@ const Team = () => {
                       <span className="live-dot" style={{ backgroundColor: '#b7b2a5' }}></span>
                       <span className="live-label">Twitch Kanal</span>
                     </a>
+                  )}
+
+                  {player.imageSource && (
+                    <p className="image-credit">
+                      Bildquelle:{' '}
+                      {player.imageSource.url ? (
+                        <a href={player.imageSource.url} target="_blank" rel="noopener noreferrer">
+                          {player.imageSource.label}
+                        </a>
+                      ) : (
+                        player.imageSource.label
+                      )}
+                    </p>
                   )}
                 </div>
               </article>

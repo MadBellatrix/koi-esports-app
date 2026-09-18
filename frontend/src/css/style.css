@@ -337,6 +337,8 @@ p {
 
 .player-card {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .player-photo {
@@ -349,7 +351,24 @@ p {
 }
 
 .player-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 1.25em 1.5em 1.5em;
+}
+
+.image-credit {
+  margin: auto 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+.image-credit a {
+  color: var(--color-gold-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .player-name {
@@ -762,6 +781,14 @@ p {
   font-size: 0.75rem;
   color: var(--color-text-muted);
   margin: 0;
+}
+
+.footer-ai-disclaimer {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 .reveal {
