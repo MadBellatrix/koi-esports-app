@@ -28,10 +28,10 @@ const Contact = () => {
     const message = formData.get("message");
 
     const body = `Name: ${name}\n\n${message}`;
-    
+
     // Öffnet das E-Mail-Programm
     window.location.href = `mailto:koiesportgg@web.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
+
     closeModal();
     event.target.reset(); // Leert das Formular nach dem Absenden
   };
@@ -42,7 +42,7 @@ const Contact = () => {
         <div className="section-inner section-inner-narrow">
           <p className="eyebrow">Kontakt</p>
           <h1 className="section-title">Schreibt uns</h1>
-          
+
           <div className="contact-grid">
             <article className="panel contact-card">
               <p className="eyebrow">Allgemein</p>
@@ -97,7 +97,7 @@ const Contact = () => {
                 </a>
               </div>
             </article>
-{/* 
+            {/* 
             <article className="panel contact-card">
               <p className="eyebrow">Direkt</p>
               <h2>Für Anfragen</h2>
@@ -109,9 +109,9 @@ const Contact = () => {
       </section>
 
       {/* --- MODAL --- */}
-      <dialog 
-        className="contact-modal" 
-        ref={modalRef} 
+      <dialog
+        className="contact-modal"
+        ref={modalRef}
         onClick={handleBackdropClick}
         aria-labelledby="contactModalTitle"
       >
@@ -123,18 +123,18 @@ const Contact = () => {
             </div>
             <button className="modal-close" type="button" onClick={closeModal} aria-label="Formular schließen">✖</button>
           </div>
-          
+
           <form className="contact-form" onSubmit={handleSubmit}>
             {/* In React wird aus "for" das Attribut "htmlFor" */}
             <label htmlFor="contactName">Name</label>
             <input id="contactName" name="name" type="text" autoComplete="name" required />
-            
+
             <label htmlFor="contactSubject">Betreff</label>
             <input id="contactSubject" name="subject" type="text" required />
-            
+
             <label htmlFor="contactMessage">Text</label>
             <textarea id="contactMessage" name="message" rows="6" required></textarea>
-            
+
             <button className="btn" type="submit">E-Mail öffnen</button>
           </form>
         </div>
