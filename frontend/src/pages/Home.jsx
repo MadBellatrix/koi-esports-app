@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import lolImg from "../assets/LOL Logo.webp"
 
 const Home = () => {
   return (
@@ -58,8 +59,8 @@ const Home = () => {
             
             <article className="game-card panel reveal is-visible">
               <img 
-                src="https://placehold.co/300x400/0F1E30/C89B3C?text=League+of+Legends" 
-                alt="League of Legends Cover" 
+                src= {lolImg}
+                alt="League of Legends Cover Quelle: https://wallpapers.com/images/high/typeface-of-league-of-legends-logo-as4mpgdim6id9dfl.webp" 
                 width="300" 
                 height="400" 
                 loading="lazy" 
