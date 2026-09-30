@@ -38,14 +38,6 @@ const players = [
     group: "Team 1"
   },
   {
-    name: 'Kyle Steven Tauchmann',
-    role: "Toplane",
-    gamertag: "Kylo",
-    image: kyloImg,
-    imagePosition: "50% 30%",
-    group: "Team 1"
-  },
-  {
     name: "Dennis Roelofs",
     role: "Jungler",
     gamertag: "KOI eraZer",
@@ -66,19 +58,6 @@ const players = [
     group: "Team 1"
   },
   {
-    name: 'Fabian "Johannes" Prebeck',
-    role: "Midlane",
-    gamertag: "DönerohneTomate",
-    twitch: "lost_maschiene",
-    image: fabianImg,
-    imagePosition: "50% 25%",
-    imageSource: {
-      label: "UHDpaper.com",
-      url: "https://www.uhdpaper.com/2022/04/syndra-lol-art-4k-7441h.html?m=0"
-    },
-    group: "Team 1"
-  },
-  {
     name: 'Moritz "Mo" Hallmann',
     role: "ADC",
     gamertag: "Shinki Hiiro",
@@ -93,6 +72,27 @@ const players = [
     image: annoImg,
     imagePosition: "50% 30%",
     imageFit: "cover",
+    group: "Team 1"
+  },
+  {
+    name: 'Kyle Steven Tauchmann',
+    role: "Toplane",
+    gamertag: "Kylo",
+    image: kyloImg,
+    imagePosition: "50% 30%",
+    group: "Team 1"
+  },
+  {
+    name: 'Fabian "Johannes" Prebeck',
+    role: "Midlane",
+    gamertag: "DönerohneTomate",
+    twitch: "lost_maschiene",
+    image: fabianImg,
+    imagePosition: "50% 25%",
+    imageSource: {
+      label: "UHDpaper.com",
+      url: "https://www.uhdpaper.com/2022/04/syndra-lol-art-4k-7441h.html?m=0"
+    },
     group: "Team 1"
   },
 
@@ -181,8 +181,11 @@ const Team = () => {
             const playerClasses = {
               'Nils "Noran" Gellenbeck': ' player-card-nils',
               'Kyle Steven Tauchmann': ' player-card-kyle',
+              'Dennis Roelofs': ' player-card-dennis',
               'Jey': ' player-card-jey',
-              'Fabian "Johannes" Prebeck': ' player-card-fabian'
+              'Fabian "Johannes" Prebeck': ' player-card-fabian',
+              'Moritz "Mo" Hallmann': ' player-card-mo',
+              'Anno': ' player-card-anno'
             };
             const cardClass = playerClasses[player.name] || '';
 
