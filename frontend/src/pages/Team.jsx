@@ -65,7 +65,7 @@ const players = [
     },
     group: "Team 1"
   },
-    {
+  {
     name: 'Fabian "Johannes" Prebeck',
     role: "Midlane",
     gamertag: "DönerohneTomate",
@@ -175,10 +175,16 @@ const Team = () => {
           {title}
         </h3>
 
-        <div className={`team-grid ${groupName === 'Team 2' ? 'team-grid-team-2' : ''}`}>
+        <div className={`team-grid ${groupName === 'Team 1' ? 'team-grid-team-1' : ''} ${groupName === 'Team 2' ? 'team-grid-team-2' : ''}`}>
           {groupPlayers.map((player, index) => {
             const imgSrc = player.image || `${placeholderBase}${encodeURIComponent(player.name)}`;
-            const cardClass = player.name === 'Kyle Steven Tauchmann' ? ' player-card-kyle' : '';
+            const playerClasses = {
+              'Nils "Noran" Gellenbeck': ' player-card-nils',
+              'Kyle Steven Tauchmann': ' player-card-kyle',
+              'Jey': ' player-card-jey',
+              'Fabian "Johannes" Prebeck': ' player-card-fabian'
+            };
+            const cardClass = playerClasses[player.name] || '';
 
             return (
               <article key={index} className={`player-card panel reveal is-visible${cardClass}`}>
