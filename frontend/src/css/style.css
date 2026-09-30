@@ -330,9 +330,6 @@ p {
 }
 
 @media (min-width: 769px) {
-  .team-grid-team-1 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 
   .team-grid-team-1 .player-card-nils,
   .team-grid-team-1 .player-card-kyle {
@@ -340,26 +337,18 @@ p {
   }
 
   .team-grid-team-1 .player-card-nils,
-  .team-grid-team-1 .player-card-jey,
-  .team-grid-team-1 .player-card-dennis {
+  .team-grid-team-1 .player-card-jey {
     grid-row: 1;
   }
 
   .team-grid-team-1 .player-card-kyle,
-  .team-grid-team-1 .player-card-fabian,
-  .team-grid-team-1 .player-card-mo {
+  .team-grid-team-1 .player-card-fabian {
     grid-row: 2;
   }
 
   .team-grid-team-1 .player-card-jey,
   .team-grid-team-1 .player-card-fabian {
     grid-column: 2;
-  }
-
-  .team-grid-team-1 .player-card-dennis,
-  .team-grid-team-1 .player-card-mo,
-  .team-grid-team-1 .player-card-anno {
-    grid-column: 3;
   }
 }
 
