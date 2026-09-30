@@ -38,6 +38,14 @@ const players = [
     group: "Team 1"
   },
   {
+    name: 'Kyle Steven Tauchmann',
+    role: "Toplane",
+    gamertag: "Kylo",
+    image: kyloImg,
+    imagePosition: "50% 30%",
+    group: "Team 1"
+  },
+  {
     name: "Dennis Roelofs",
     role: "Jungler",
     gamertag: "KOI eraZer",
@@ -54,6 +62,19 @@ const players = [
     imageSource: {
       label: "UHDpaper.com",
       url: "https://www.uhdpaper.com/2024/03/peacemaker-high-noon-yone-4k-8k-3181o.html?m=1"
+    },
+    group: "Team 1"
+  },
+    {
+    name: 'Fabian "Johannes" Prebeck',
+    role: "Midlane",
+    gamertag: "DönerohneTomate",
+    twitch: "lost_maschiene",
+    image: fabianImg,
+    imagePosition: "50% 25%",
+    imageSource: {
+      label: "UHDpaper.com",
+      url: "https://www.uhdpaper.com/2022/04/syndra-lol-art-4k-7441h.html?m=0"
     },
     group: "Team 1"
   },
@@ -80,74 +101,55 @@ const players = [
 
   // --- TEAM 2 ---
 
-  {
-    name: "Mattes Werner",
-    role: "Toplane",
-    gamertag: "tarrosilver",
-    image: mattesImg,
-    imageFit: "cover",
-    imagePosition: "90% 10%",
-    imageSource: {
-      label: "UHDpaper.com",
-      url: "https://www.uhdpaper.com/2021/06/renekton-lol-league-of-4k-8710b.html?m=1"
-    },
-    group: "Team 2"
-  },
-  {
-    name: 'Kyle Steven Tauchmann',
-    role: "Toplane",
-    gamertag: "Kylo",
-    image: kyloImg,
-    imagePosition: "50% 30%",
-    group: "Team 2"
-  },
-  {
-    name: "Michael Niemann",
-    role: "Jungler",
-    gamertag: "Hütes des Waldes",
-    image: null,
-    group: "Team 2"
-  },
+  // {
+  //   name: "Mattes Werner",
+  //   role: "Toplane",
+  //   gamertag: "tarrosilver",
+  //   image: mattesImg,
+  //   imageFit: "cover",
+  //   imagePosition: "90% 10%",
+  //   imageSource: {
+  //     label: "UHDpaper.com",
+  //     url: "https://www.uhdpaper.com/2021/06/renekton-lol-league-of-4k-8710b.html?m=1"
+  //   },
+  //   group: "Team 2"
+  // },
+  //
+  // {
+  //   name: "Michael Niemann",
+  //   role: "Jungler",
+  //   gamertag: "Hütes des Waldes",
+  //   image: null,
+  //   group: "Team 2"
+  // },
 
-  {
-    name: 'Fabian "Johannes" Prebeck',
-    role: "Midlane",
-    gamertag: "DönerohneTomate",
-    twitch: "lost_maschiene",
-    image: fabianImg,
-    imagePosition: "50% 25%",
-    imageSource: {
-      label: "UHDpaper.com",
-      url: "https://www.uhdpaper.com/2022/04/syndra-lol-art-4k-7441h.html?m=0"
-    },
-    group: "Team 2"
-  },
 
-  {
-    name: "Philip Asbeck",
-    role: "ADC",
-    gamertag: "Stay Aggressive",
-    image: philipImg,
-    imagePosition: "50% 35%",
-    imageSource: {
-      label: "UHDpaper.com",
-      url: "https://www.uhdpaper.com/2026/01/kaisa-lol-art-4k-8k-wallpaper-6805l.html"
-    },
-    group: "Team 2"
-  },
 
-  {
-    name: 'Mario Meßmer',
-    role: "Supporter",
-    gamertag: "CrueLOr",
-    image: marioImg,
-    imagePosition: "50% 35%",
-    imageSource: {
-      label: "UHDpaper.com",
-      url: "https://www.uhdpaper.com/2018/12/thresh-lol-high-noon-splash-art-8k-298.html"
-    },
-    group: "Team 2"
-  },
+  // {
+  //   name: "Philip Asbeck",
+  //   role: "ADC",
+  //   gamertag: "Stay Aggressive",
+  //   image: philipImg,
+  //   imagePosition: "50% 35%",
+  //   imageSource: {
+  //     label: "UHDpaper.com",
+  //     url: "https://www.uhdpaper.com/2026/01/kaisa-lol-art-4k-8k-wallpaper-6805l.html"
+  //   },
+  //   group: "Team 2"
+  // },
+
+  // {
+  //   name: 'Mario Meßmer',
+  //   role: "Supporter",
+  //   gamertag: "CrueLOr",
+  //   image: marioImg,
+  //   imagePosition: "50% 35%",
+  //   imageSource: {
+  //     label: "UHDpaper.com",
+  //     url: "https://www.uhdpaper.com/2018/12/thresh-lol-high-noon-splash-art-8k-298.html"
+  //   },
+  //   group: "Team 2"
+  // },
 
 ];
 
@@ -236,8 +238,8 @@ const Team = () => {
 
         {/* Hier rufen wir unsere Hilfsfunktion für jede Gruppe auf */}
         {renderPlayerGroup("Management", "Management & Owner")}
-        {renderPlayerGroup("Team 1", "KOI Gaming")}
-        {renderPlayerGroup("Team 2", "KOI Kohaku")}
+        {renderPlayerGroup("Team 1", "KOI eSport")}
+        {/* {renderPlayerGroup("Team 2", "KOI Kohaku")} */}
 
       </div>
     </section>
