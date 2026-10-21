@@ -140,7 +140,7 @@ const players = [
     name: "Nikita",
     gamertag: "Faded",
     image: nikitaValImg,
-    country: "🇩🇪 , ",
+    country: "🇩🇪",
     countryName: "Deutschland",
     group: "Valorant"
   },
