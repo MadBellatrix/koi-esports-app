@@ -469,11 +469,48 @@ p {
 }
 
 .player-country {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
   margin-left: 0.35em;
   font-size: 0.9em;
   line-height: 1;
   vertical-align: 0.08em;
+}
+
+.country-flag {
+  display: inline-block;
+  width: 1.35em;
+  height: 0.9em;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 0.08em;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 15%);
+}
+
+.country-flag-at {
+  background: linear-gradient(
+    to bottom,
+    #ed2939 0 33.33%,
+    #fff 33.33% 66.66%,
+    #ed2939 66.66%
+  );
+}
+
+.country-flag-de {
+  background: linear-gradient(
+    to bottom,
+    #000 0 33.33%,
+    #dd0000 33.33% 66.66%,
+    #ffce00 66.66%
+  );
+}
+
+.country-flag-se {
+  background:
+    linear-gradient(to right, transparent 0 30%, #fecc00 30% 43%, transparent 43%),
+    linear-gradient(to bottom, transparent 0 40%, #fecc00 40% 60%, transparent 60%),
+    #006aa7;
 }
 
 .player-role {

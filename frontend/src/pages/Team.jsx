@@ -107,7 +107,7 @@ const players = [
     name: "Sonja",
     gamertag: "ynnuSynnuF",
     image: sonjaValImg,
-    country: "🇦🇹",
+    countryCode: "at",
     countryName: "Österreich",
     group: "Valorant"
   },
@@ -115,7 +115,7 @@ const players = [
     name: "Phillipp",
     gamertag: "Phuezzz",
     image: philipValImg,
-    country: "🇦🇹",
+    countryCode: "at",
     countryName: "Österreich",
     group: "Valorant"
   },
@@ -123,7 +123,7 @@ const players = [
     name: "Adam",
     gamertag: "Uzzzi",
     image: adamValImg,
-    country: "🇸🇪",
+    countryCode: "se",
     countryName: "Schweden",
     group: "Valorant"
   },
@@ -132,7 +132,7 @@ const players = [
     gamertag: "zyvean",
     image: maxValImg,
     twitch: "zyveanvlr",
-    country: "🇦🇹",
+    countryCode: "at",
     countryName: "Östereich",
     group: "Valorant"
   },
@@ -140,7 +140,7 @@ const players = [
     name: "Nikita",
     gamertag: "Faded",
     image: nikitaValImg,
-    country: "🇩🇪",
+    countryCode: "de",
     countryName: "Deutschland",
     group: "Valorant"
   },
@@ -149,7 +149,7 @@ const players = [
   //   name: "Noah",
   //   gamertag: "moonriver",
   //   image: adamValImg,
-  //   country: "🇩🇪 🇭🇷",
+  //   countryCode: "de-hr",
   //   countryName: "Deutschland Kroatien",
   //   group: "Valorant"
   // },
@@ -263,13 +263,19 @@ const Team = () => {
                 <div className="player-body">
                   <h3 className="player-name">
                     {player.name}
-                    {player.country && (
+                    {player.countryCode && (
                       <span
                         className="player-country"
                         aria-label={`Nationalität: ${player.countryName}`}
                         title={player.countryName}
                       >
-                        {player.country}
+                        {player.countryCode.split('-').map((countryCode) => (
+                          <span
+                            key={countryCode}
+                            className={`country-flag country-flag-${countryCode}`}
+                            aria-hidden="true"
+                          />
+                        ))}
                       </span>
                     )}
                   </h3>
