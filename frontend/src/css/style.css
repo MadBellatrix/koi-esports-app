@@ -468,6 +468,14 @@ p {
   margin-bottom: 0.15em;
 }
 
+.player-country {
+  display: inline-block;
+  margin-left: 0.35em;
+  font-size: 0.9em;
+  line-height: 1;
+  vertical-align: 0.08em;
+}
+
 .player-role {
   font-family: var(--font-mono);
   text-transform: uppercase;

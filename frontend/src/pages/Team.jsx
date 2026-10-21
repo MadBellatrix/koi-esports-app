@@ -11,6 +11,12 @@ import philipImg from '../assets/Philip.png'
 import nilsImg from '../assets/Nils.png'
 import dennisImg from '../assets/Dennis.png'
 import mattesImg from '../assets/Mattes.jpg'
+import sonjaValImg from '../assets/Sonja(VAL).png'
+import adamValImg from '../assets/Adam(VAL).jpg'
+import philipValImg from '../assets/Philip(VAL).png'
+import maxValImg from '../assets/Maximillian(VAL).jpg'
+import nikitaValImg from '../assets/Nikita.png'
+
 
 // Platzhalter-URL für Spieler ohne eigenes Bild
 const placeholderBase = "https://placehold.co/400x400/0F1E30/C89B3C?text=";
@@ -95,6 +101,58 @@ const players = [
     },
     group: "Team 1"
   },
+
+  // --- VALORANT ---
+  {
+    name: "Sonja",
+    gamertag: "ynnuSynnuF",
+    image: sonjaValImg,
+    country: "🇦🇹",
+    countryName: "Österreich",
+    group: "Valorant"
+  },
+  {
+    name: "Phillipp",
+    gamertag: "Phuezzz",
+    image: philipValImg,
+    country: "🇦🇹",
+    countryName: "Österreich",
+    group: "Valorant"
+  },
+  {
+    name: "Adam",
+    gamertag: "Uzzzi",
+    image: adamValImg,
+    country: "🇸🇪",
+    countryName: "Schweden",
+    group: "Valorant"
+  },
+    {
+    name: "Maximillian",
+    gamertag: "zyvean",
+    image: maxValImg,
+    twitch: "zyveanvlr",
+    country: "🇦🇹",
+    countryName: "Östereich",
+    group: "Valorant"
+  },
+    {
+    name: "Nikita",
+    gamertag: "Faded",
+    image: nikitaValImg,
+    country: "🇩🇪 , ",
+    countryName: "Deutschland",
+    group: "Valorant"
+  },
+  //Daten folgen noch 
+  //   {
+  //   name: "Noah",
+  //   gamertag: "moonriver",
+  //   image: adamValImg,
+  //   country: "🇩🇪 🇭🇷",
+  //   countryName: "Deutschland Kroatien",
+  //   group: "Valorant"
+  // },
 
 
 
@@ -203,7 +261,18 @@ const Team = () => {
                   onError={(e) => { e.target.src = `${placeholderBase}${encodeURIComponent(player.name)}` }}
                 />
                 <div className="player-body">
-                  <h3 className="player-name">{player.name}</h3>
+                  <h3 className="player-name">
+                    {player.name}
+                    {player.country && (
+                      <span
+                        className="player-country"
+                        aria-label={`Nationalität: ${player.countryName}`}
+                        title={player.countryName}
+                      >
+                        {player.country}
+                      </span>
+                    )}
+                  </h3>
                   <p className="player-role">{player.role} {player.gamertag ? `| ${player.gamertag}` : ''}</p>
 
                   {player.twitch && (
@@ -247,7 +316,8 @@ const Team = () => {
 
         {/* Hier rufen wir unsere Hilfsfunktion für jede Gruppe auf */}
         {renderPlayerGroup("Management", "Management & Owner")}
-        {renderPlayerGroup("Team 1", "KOI eSport")}
+        {renderPlayerGroup("Team 1", "KOI eSport(League of Legends)")}
+        {renderPlayerGroup("Valorant", "KOI eSport (Valorant)")}
         {/* {renderPlayerGroup("Team 2", "KOI Kohaku")} */}
 
       </div>
