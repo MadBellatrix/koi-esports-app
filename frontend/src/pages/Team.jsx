@@ -16,6 +16,7 @@ import adamValImg from '../assets/Adam(VAL).jpg'
 import philipValImg from '../assets/Philip(VAL).png'
 import maxValImg from '../assets/Maximillian(VAL).jpg'
 import nikitaValImg from '../assets/Nikita.png'
+import manuelImg from '../assets/Manuel.jpeg'
 
 
 // Platzhalter-URL für Spieler ohne eigenes Bild
@@ -32,6 +33,14 @@ const players = [
     image: florianImg,
     imagePosition: "50% 35%",
     group: "Management"
+  },
+
+  // --- COACHING ---
+  {
+    name: "Manuel Rankl",
+    role: "HeadCoach League of Legends",
+    image: manuelImg,
+    group: "Coaching"
   },
 
   // --- TEAM 1 ---
@@ -322,6 +331,7 @@ const Team = () => {
 
         {/* Hier rufen wir unsere Hilfsfunktion für jede Gruppe auf */}
         {renderPlayerGroup("Management", "Management & Owner")}
+        {renderPlayerGroup("Coaching", "Coaching")}
         {renderPlayerGroup("Team 1", "KOI eSport(League of Legends)")}
         {renderPlayerGroup("Valorant", "KOI eSport (Valorant)")}
         {/* {renderPlayerGroup("Team 2", "KOI Kohaku")} */}
